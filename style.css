@@ -341,28 +341,22 @@ label {
 .btn:hover {
   opacity: 0.8;
 }
-
 /* Print adjustments */
 @media print {
-  .button-container,
-  .btn {
-    display: none;
+  /* Ensuring layout and colors for print */
+  body, .container {
+    background-color: #ffffff !important;
+    color: #000 !important;
   }
 
-  .profile,
-  .contact-section,
-  .professional-section {
+  /* Apply consistent colors to key sections in print */
+  .profile, .contact-section, .professional-section {
+    background-color: #082145 !important; /* Dark Blue */
+    color: #f0f4f8 !important; /* Light text color */
     page-break-inside: avoid;
-    margin: 2px;
-  }
-
-  .profile {
-    flex-direction: row;
-    color: white;
-    background-color: #082145;
-    padding: 10px;
-    width: 94%;
+    margin: 5px 0;
     box-shadow: none;
+    border: none;
   }
 
   .profile-image {
@@ -371,35 +365,23 @@ label {
     margin-right: 15px;
   }
 
-  .profile-info {
-    text-align: left;
-    font-size: 18px;
-    color: white;
-  }
-
-  .contact-section {
-    width: 48%;
-    background-color: #082145;
-  }
-
-  .professional-section {
-    width: 48%;
-    background-color: #f4f4f4;
-  }
-
   .resume-container {
     flex-direction: row;
     gap: 20px;
   }
 
-  /* Fix for smaller margins and proper print display */
-  h2 {
-    color: #082145;
-    font-size: 20px;
+  /* Hide buttons in print view */
+  .button-container, .btn {
+    display: none !important;
   }
 
-  .info-box {
-    margin-bottom: 10px;
+  h2 {
+    color: #f0f4f8 !important;
+  }
+
+  /* Ensure skill bars display correctly */
+  .skill-bar, .skill-fill {
+    background-color: #082145 !important;
   }
 }
 
@@ -408,32 +390,12 @@ label {
   .profile h2 {
     font-size: large;
   }
-
   .profile-image {
     width: 120px;
     height: 120px;
   }
-
   .btn {
     width: 100%;
     margin-top: 10px;
   }
-
-  .profile {
-    padding: 10px;
-  }
-
-  .resume-container {
-    flex-direction: column;
-  }
-}
-
-/* New Class for Styling Box (as per requirement) */
-.dddd {
-  background-color: #082145;
-  color: white;
-  width: 30%;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

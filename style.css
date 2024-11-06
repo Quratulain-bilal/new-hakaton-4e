@@ -348,12 +348,14 @@ label {
   .btn {
     display: none;
   }
+
   .profile,
   .contact-section,
   .professional-section {
     page-break-inside: avoid;
     margin: 2px;
   }
+
   .profile {
     flex-direction: row;
     color: white;
@@ -362,19 +364,42 @@ label {
     width: 94%;
     box-shadow: none;
   }
+
   .profile-image {
     width: 100px;
     height: 100px;
     margin-right: 15px;
   }
+
   .profile-info {
     text-align: left;
     font-size: 18px;
     color: white;
   }
+
   .contact-section {
     width: 48%;
     background-color: #082145;
+  }
+
+  .professional-section {
+    width: 48%;
+    background-color: #f4f4f4;
+  }
+
+  .resume-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  /* Fix for smaller margins and proper print display */
+  h2 {
+    color: #082145;
+    font-size: 20px;
+  }
+
+  .info-box {
+    margin-bottom: 10px;
   }
 }
 
@@ -383,18 +408,32 @@ label {
   .profile h2 {
     font-size: large;
   }
+
   .profile-image {
     width: 120px;
     height: 120px;
   }
+
   .btn {
     width: 100%;
     margin-top: 10px;
   }
+
+  .profile {
+    padding: 10px;
+  }
+
+  .resume-container {
+    flex-direction: column;
+  }
 }
 
+/* New Class for Styling Box (as per requirement) */
 .dddd {
   background-color: #082145;
   color: white;
   width: 30%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

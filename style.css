@@ -353,10 +353,16 @@ label {
   .profile, .contact-section, .professional-section {
     background-color: #082145 !important; /* Dark Blue */
     color: #f0f4f8 !important; /* Light text color */
+    margin: 0 !important; /* Remove extra gaps */
+    padding: 10px !important; /* Ensure consistent padding */
     page-break-inside: avoid;
-    margin: 5px 0;
-    box-shadow: none;
-    border: none;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .resume-container {
+    flex-direction: row !important;
+    gap: 10px !important;
   }
 
   .profile-image {
@@ -365,9 +371,9 @@ label {
     margin-right: 15px;
   }
 
-  .resume-container {
-    flex-direction: row;
-    gap: 20px;
+  .contact-section, .professional-section {
+    width: 48% !important;
+    margin: 5px 0 !important;
   }
 
   /* Hide buttons in print view */

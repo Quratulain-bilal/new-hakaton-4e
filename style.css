@@ -341,67 +341,48 @@ label {
 .btn:hover {
   opacity: 0.8;
 }
-/* Print adjustments */
+
+/* Print Mode Adjustments */
 @media print {
-  /* Ensuring layout and colors for print */
-  body, .container {
-    background-color: #ffffff !important;
-    color: #000 !important;
-  }
-
-  /* Apply consistent colors to key sections in print */
-  .profile, .contact-section, .professional-section {
-    background-color: #082145 !important; /* Dark Blue */
+  .print-cv .container, .print-cv .profile, .print-cv .contact-section, .print-cv .professional-section {
+    background-color: #082145 !important; /* Dark Blue for print */
     color: #f0f4f8 !important; /* Light text color */
-    margin: 0 !important; /* Remove extra gaps */
-    padding: 10px !important; /* Ensure consistent padding */
-    page-break-inside: avoid;
     box-shadow: none !important;
-    border: none !important;
+    margin: 0 !important;
+    padding: 10px !important;
   }
 
-  .resume-container {
-    flex-direction: row !important;
-    gap: 10px !important;
-  }
-
-  .profile-image {
+  /* Profile section in print */
+  .print-cv .profile-image {
     width: 100px;
     height: 100px;
-    margin-right: 15px;
+    margin-right: 10px;
   }
 
-  .contact-section, .professional-section {
+  /* Layout adjustments */
+  .print-cv .resume-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  .print-cv .contact-section, .print-cv .professional-section {
     width: 48% !important;
     margin: 5px 0 !important;
   }
 
-  /* Hide buttons in print view */
+  /* Remove buttons in print mode */
   .button-container, .btn {
     display: none !important;
   }
 
-  h2 {
-    color: #f0f4f8 !important;
+  /* Skill bar colors */
+  .print-cv .skill-bar {
+    background-color: #e0e0e0 !important;
   }
 
-  /* Ensure skill bars display correctly */
-  .skill-bar, .skill-fill {
-    background-color: #082145 !important;
-  }
-}
-
-/* Small screen adjustments */
-@media (max-width: 576px) {
-  .profile h2 {
-    font-size: large;
-  }
-  .profile-image {
-    width: 120px;
-    height: 120px;
-  }
-  .btn {
-    width: 100%;
-    margin-top: 10px;
+  .print-cv .skill-fill {
+    background-color: #003366 !important; /* Ensure dark blue for print */
   }
 }

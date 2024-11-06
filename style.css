@@ -377,7 +377,7 @@ h2 {
     flex-direction: row;
     gap: 15px;
     width: 100%;
-    padding: 0;
+    padding: 15;
     margin: 0;
   }
 

@@ -197,8 +197,6 @@ label {
 
 
 /*cssssssssssssssssss*/
-
-/* Container styling */
 .container {
   display: flex;
   flex-direction: column;
@@ -215,7 +213,7 @@ label {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background-color:#082145 ; /* Changed to Dark Blue */
+  background-color: #082145; /* Dark Blue */
   color: #f0f4f8;
   padding: 20px;
   border-radius: 8px;
@@ -269,7 +267,7 @@ label {
 }
 
 .contact-section {
-  background-color:#082145 ; /* Changed to Dark Blue */
+  background-color: #082145; /* Dark Blue */
 }
 
 .contact-section h2 {
@@ -308,7 +306,7 @@ label {
 /* Heading styling */
 h2 {
   color: #082145;
-  border-bottom: 2px solid #003366; /* Changed to Dark Blue */
+  border-bottom: 2px solid #003366; /* Dark Blue */
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
@@ -332,13 +330,12 @@ h2 {
   margin-right: 10px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;;
+  cursor: pointer;
   transition: background-color 0.3s ease;
-  
 }
 
 .btn-primary {
-  background-color: #003366; /* Changed to Dark Blue */
+  background-color: #003366; /* Dark Blue */
   color: white;
 }
 
@@ -353,31 +350,85 @@ h2 {
 
 /* Print adjustments */
 @media print {
+  * {
+    -webkit-print-color-adjust: exact !important; /* Force exact color rendering */
+    color-adjust: exact !important; /* For non-webkit browsers */
+  }
+
   .button-container,
   .btn {
-    display: none;
+    display: none !important; /* Hide buttons in print */
   }
+
+  /* Profile Section - Ensure proper color and structure */
   .profile,
   .contact-section,
   .professional-section {
-    page-break-inside: avoid;
+    background-color: #082145 !important; /* Dark Blue */
+    color: #f0f4f8 !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
   }
-  .profile {
-    flex-direction: row;
-    color: white;
-    background-color: #082145;
-    padding: 10px;
-    width: 94%;
-    box-shadow: none;
-  }
+
+  /* Profile Image */
   .profile-image {
-    width: 100px;
-    height: 100px;
-    margin-right: 15px;
+    width: 100px !important;
+    height: 100px !important;
+    margin-right: 15px !important;
   }
-  .profile-info {
-    text-align: left;
-    font-size: 18px;
+
+  /* Contact Section Text */
+  .contact-section h2,
+  .professional-section h2 {
+    color: #e6e6fa !important; /* Light Lavender for headers */
+  }
+
+  /* Resume Structure */
+  .resume-container {
+    display: block !important; /* Ensuring it's in one column for print */
+    padding: 0 !important;
+  }
+
+  .contact-section,
+  .professional-section {
+    width: 100% !important;  /* Full width for mobile */
+    margin-bottom: 20px !important;
+  }
+
+  /* Prevent content from breaking */
+  .profile,
+  .contact-section,
+  .professional-section {
+    page-break-inside: avoid !important; /* Prevent page break within content */
+  }
+
+  /* Skill Bars */
+  .skill-bar {
+    background-color: #e0e0e0 !important;
+    border-radius: 25px !important;
+  }
+
+  .skill-fill {
+    height: 20px !important;
+    border-radius: 25px !important;
+  }
+
+  /* Ensure that headings and other text show correctly */
+  h2 {
+    color: #082145 !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid #003366 !important;
+    padding-bottom: 5px !important;
+  }
+
+  /* Info Box */
+  .info-box {
+    background-color: #f4f4f4 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
   }
 }
 
@@ -394,10 +445,4 @@ h2 {
     width: 100%;
     margin-top: 10px;
   }
-}
-.dddd{
-  background-color: #082145;
-  color: white;
-width: 30%;
-
 }

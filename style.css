@@ -332,8 +332,9 @@ h2 {
   margin-right: 10px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: pointer;;
   transition: background-color 0.3s ease;
+  
 }
 
 .btn-primary {
@@ -393,4 +394,10 @@ h2 {
     width: 100%;
     margin-top: 10px;
   }
+}
+.dddd{
+  background-color: #082145;
+  color: white;
+width: 30%;
+
 }

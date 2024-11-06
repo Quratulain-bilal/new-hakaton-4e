@@ -199,228 +199,191 @@ label {
 
 /*cssssssssssssssssss*/
 /* Container styling */
-.container {
+
+ .container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
   padding: 20px;
-  background-color: #f0f4f8;
-  font-style: italic;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(135deg, #e6e9f0, #eef2f3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-/* Profile section styling */
+/* Profile Section Styling for Screen */
 .profile {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background-color: #082145; /* Changed to Dark Blue */
+  background-color: #2d3e50;
   color: #f0f4f8;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .profile h2 {
-  color: #e6e6fa;
-  font-size: xx-large;
-  font-weight: 500;
-  font-style: italic;
+  color: #ffebc2;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 20px;
 }
 
-/* Image styling */
 .profile-image {
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  margin-right: 10px;
   object-fit: cover;
+  border: 4px solid #ffebc2;
+  margin-right: 20px;
 }
 
+/* Responsive Profile Section */
 @media (max-width: 768px) {
   .profile {
     flex-direction: column;
     text-align: center;
+    padding: 15px;
+  }
+  
+  .profile-image {
+    margin: 0 auto 10px;
+    width: 120px;
+    height: 120px;
   }
 
-  .profile-image {
-    margin-right: 0;
-    margin-bottom: 15px;
+  .profile h2 {
+    font-size: 1.6rem;
+    margin: 10px 0;
   }
 }
 
-/* Resume container styling */
+/* Resume Container Styling */
 .resume-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
 }
 
-/* Contact section styling */
-.contact-section,
-.professional-section {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+/* Contact & Professional Sections */
+.contact-section, .professional-section {
+  background-color: #f8f9fb;
   border-radius: 8px;
   padding: 20px;
-  width: 48%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Contact Section Specific Styling */
 .contact-section {
-  background-color: #082145; /* Changed to Dark Blue */
+  background-color: #2d3e50;
+  color: #f0f4f8;
+  width: 40%;
 }
 
 .contact-section h2 {
-  color: whitesmoke;
+  color: #ffebc2;
 }
 
+/* Professional Section */
 .professional-section {
-  width: 80%;
+  background-color: #ffffff;
+  color: #333;
+  width: 70%;
 }
 
-/* Skill bars */
-.skill-bar {
-  background-color: #e0e0e0;
-  border-radius: 25px;
-  margin: 10px 0;
-}
-
-.skill-fill {
-  height: 20px;
-  border-radius: 25px;
-  transition: width 0.3s ease;
-}
-
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-  .resume-container {
-    flex-direction: column;
-  }
-  .contact-section,
-  .professional-section {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-}
-
-/* Heading styling */
 h2 {
-  color: #082145;
-  border-bottom: 2px solid #003366; /* Changed to Dark Blue */
+  color: #2d3e50;
+  border-bottom: 3px solid #ffebc2;
   padding-bottom: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
 }
 
-/* Info box styling */
-.info-box {
-  background-color: #f4f4f4;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
-/* Button styling */
-.button-container {
-  margin-top: 20px;
-}
-
-.btn {
-  padding: 10px 20px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #003366; /* Changed to Dark Blue */
-  color: white;
-}
-
-.btn-secondary {
-  background-color: #ccc;
-  color: black;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
-
-/* Print-specific styles */
+/* Print Styling for All Screens */
 @media print {
-  /* Ensure that all colors are applied during print */
+  /* General Print Adjustments */
   body {
-    color: #000; /* Default text color */
-    background-color: #fff; /* Ensure background is white for printing */
+    color: #333;
+    background-color: #fff;
+    -webkit-print-color-adjust: exact; /* Ensures colors print accurately */
   }
 
-  /* Profile section for print */
-  .profile {
-    flex-direction: row;
-    background-color: #082145; /* Ensure profile background is applied */
-    color: white; /* Ensure text color is white */
-    padding: 10px;
-    width: 96%;
-    box-shadow: none; /* Remove box-shadow for print */
+  /* Profile Section Print */
+  .profile .profile {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    width: 70%;
+  }
+  
+  .profile-image {
+    margin: 0 auto 10px;
+    width: 120px;
+    height: 120px;
+    
   }
 
   .profile h2 {
-    color: #e6e6fa; /* Ensure heading color remains */
+    font-size: 1.6rem;
+    margin: 10px 0;
+  }
+  .profile h2 {
+    color: #ffebc2;
+    font-size: 1.5rem;
+    margin-left: 10px;
   }
 
   .profile-image {
-    object-fit: contain; /* Change to contain */
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    
   }
 
-  /* Contact section */
-  .contact-section {
-    background-color: #082145; /* Ensure background is dark blue */
-    color: whitesmoke; /* Ensure text is white */
-  }
-
-  /* Ensure all other sections maintain the correct background and text colors */
-  .professional-section {
-    background-color: #ffffff; /* Ensure the background remains white */
-    color: #000; /* Set text color to black for better visibility on print */
-    border: 1px solid #ddd;
-  }
-
-  /* Ensure no padding or margins interfere with print */
+  /* Resume Container for Print */
   .resume-container {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
     width: 100%;
+    padding: 0;
     margin: 0;
-    padding: 0;
   }
 
-  .btn {
-    display: none; /* Hide buttons when printing */
+  /* Contact Section Print */
+  .contact-section {
+    background-color: #2d3e50;
+    color: #f0f4f8;
+    width: 58%;
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 5px;
   }
 
-  .button-container {
-    display: none; /* Hide button container */
+  .contact-section h2 {
+    color: #ffebc2;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
   }
 
-  /* Remove excess margins and padding for print */
-  .info-box {
-    padding: 0;
-    margin-bottom: 10px;
-    background-color: #f4f4f4; /* Change to f4f4f4 */
-    color: #000; /* Ensure text is black */
+  /* Professional Section Print */
+  .professional-section {
+    background-color: #ffffff;
+    color: #333;
+    width: 68%;
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 5px;
   }
 
-  /* Skill bars for print */
-  .skill-bar {
-    background-color: #e0e0e0;
-  }
-
-  .skill-fill {
-    background-color: #082145; /* Change to 082145 */
+  /* Print Layout Adjustments */
+  @media (max-width: 768px) {
+    .profile, .contact-section, .professional-section {
+      width: 100%;
+      margin: 0 0 10px 0;
+      padding: 10px;
+    }
   }
 }
-

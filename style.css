@@ -349,7 +349,6 @@ h2 {
 .btn:hover {
   opacity: 0.8;
 }
-
 /* Print-specific styles */
 @media print {
   /* Ensure that all colors are applied during print */

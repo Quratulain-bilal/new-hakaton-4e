@@ -197,11 +197,12 @@ label {
 
 
 /*cssssssssssssssssss*/
+
+/* Container styling */
 .container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
   padding: 20px;
   background-color: #f0f4f8;
   font-style: italic;
@@ -213,7 +214,7 @@ label {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background-color: #082145; /* Dark Blue */
+  background-color: #082145;
   color: #f0f4f8;
   padding: 20px;
   border-radius: 8px;
@@ -241,10 +242,8 @@ label {
     flex-direction: column;
     text-align: center;
   }
-
   .profile-image {
-    margin-right: 0;
-    margin-bottom: 15px;
+    margin: 0 0 15px;
   }
 }
 
@@ -255,7 +254,6 @@ label {
   justify-content: space-between;
 }
 
-/* Contact section styling */
 .contact-section,
 .professional-section {
   background-color: #ffffff;
@@ -267,11 +265,15 @@ label {
 }
 
 .contact-section {
-  background-color: #082145; /* Dark Blue */
+  background-color: #082145;
 }
 
-.contact-section h2 {
-  color: whitesmoke;
+.contact-section h2,
+.professional-section h2 {
+  color: #082145;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .professional-section {
@@ -303,14 +305,6 @@ label {
   }
 }
 
-/* Heading styling */
-h2 {
-  color: #082145;
-  border-bottom: 2px solid #003366; /* Dark Blue */
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-}
-
 /* Info box styling */
 .info-box {
   background-color: #f4f4f4;
@@ -335,7 +329,7 @@ h2 {
 }
 
 .btn-primary {
-  background-color: #003366; /* Dark Blue */
+  background-color: #003366;
   color: white;
 }
 
@@ -350,85 +344,37 @@ h2 {
 
 /* Print adjustments */
 @media print {
-  * {
-    -webkit-print-color-adjust: exact !important; /* Force exact color rendering */
-    color-adjust: exact !important; /* For non-webkit browsers */
-  }
-
   .button-container,
   .btn {
-    display: none !important; /* Hide buttons in print */
+    display: none;
   }
-
-  /* Profile Section - Ensure proper color and structure */
   .profile,
   .contact-section,
   .professional-section {
-    background-color: #082145 !important; /* Dark Blue */
-    color: #f0f4f8 !important;
-    padding: 20px !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    border-radius: 8px !important;
+    page-break-inside: avoid;
+    margin: 2px;
   }
-
-  /* Profile Image */
+  .profile {
+    flex-direction: row;
+    color: white;
+    background-color: #082145;
+    padding: 10px;
+    width: 94%;
+    box-shadow: none;
+  }
   .profile-image {
-    width: 100px !important;
-    height: 100px !important;
-    margin-right: 15px !important;
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
   }
-
-  /* Contact Section Text */
-  .contact-section h2,
-  .professional-section h2 {
-    color: #e6e6fa !important; /* Light Lavender for headers */
+  .profile-info {
+    text-align: left;
+    font-size: 18px;
+    color: white;
   }
-
-  /* Resume Structure */
-  .resume-container {
-    display: block !important; /* Ensuring it's in one column for print */
-    padding: 0 !important;
-  }
-
-  .contact-section,
-  .professional-section {
-    width: 40% !important;  /* Full width for mobile */
-    margin-bottom: 3px !important;
-  }
-
-  /* Prevent content from breaking */
-  .profile,
-  .contact-section,
-  .professional-section {
-    page-break-inside: avoid !important; /* Prevent page break within content */
-  }
-
-  /* Skill Bars */
-  .skill-bar {
-    background-color: #e0e0e0 !important;
-    border-radius: 25px !important;
-  }
-
-  .skill-fill {
-    height: 20px !important;
-    border-radius: 25px !important;
-  }
-
-  /* Ensure that headings and other text show correctly */
-  h2 {
-    color: #082145 !important;
-    font-weight: bold !important;
-    border-bottom: 2px solid #003366 !important;
-    padding-bottom: 5px !important;
-  }
-
-  /* Info Box */
-  .info-box {
-    background-color: #f4f4f4 !important;
-    border: 1px solid #ccc !important;
-    border-radius: 5px !important;
-    padding: 10px !important;
+  .contact-section {
+    width: 48%;
+    background-color: #082145;
   }
 }
 
@@ -436,7 +382,6 @@ h2 {
 @media (max-width: 576px) {
   .profile h2 {
     font-size: large;
-    color:white;
   }
   .profile-image {
     width: 120px;
@@ -446,4 +391,10 @@ h2 {
     width: 100%;
     margin-top: 10px;
   }
+}
+
+.dddd {
+  background-color: #082145;
+  color: white;
+  width: 30%;
 }

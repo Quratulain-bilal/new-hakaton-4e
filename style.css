@@ -1,3 +1,4 @@
+
 /* General Styles */
 body {
   font-family: 'Poppins', sans-serif;
@@ -197,12 +198,12 @@ label {
 
 
 /*cssssssssssssssssss*/
-
 /* Container styling */
 .container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: auto;
   padding: 20px;
   background-color: #f0f4f8;
   font-style: italic;
@@ -214,7 +215,7 @@ label {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  background-color: #082145;
+  background-color: #082145; /* Changed to Dark Blue */
   color: #f0f4f8;
   padding: 20px;
   border-radius: 8px;
@@ -242,8 +243,10 @@ label {
     flex-direction: column;
     text-align: center;
   }
+
   .profile-image {
-    margin: 0 0 15px;
+    margin-right: 0;
+    margin-bottom: 15px;
   }
 }
 
@@ -254,6 +257,7 @@ label {
   justify-content: space-between;
 }
 
+/* Contact section styling */
 .contact-section,
 .professional-section {
   background-color: #ffffff;
@@ -265,15 +269,11 @@ label {
 }
 
 .contact-section {
-  background-color: #082145;
+  background-color: #082145; /* Changed to Dark Blue */
 }
 
-.contact-section h2,
-.professional-section h2 {
-  color: #082145;
-  border-bottom: 2px solid #003366;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
+.contact-section h2 {
+  color: whitesmoke;
 }
 
 .professional-section {
@@ -305,6 +305,14 @@ label {
   }
 }
 
+/* Heading styling */
+h2 {
+  color: #082145;
+  border-bottom: 2px solid #003366; /* Changed to Dark Blue */
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
 /* Info box styling */
 .info-box {
   background-color: #f4f4f4;
@@ -329,7 +337,7 @@ label {
 }
 
 .btn-primary {
-  background-color: #003366;
+  background-color: #003366; /* Changed to Dark Blue */
   color: white;
 }
 
@@ -342,47 +350,3 @@ label {
   opacity: 0.8;
 }
 
-/* Print Mode Adjustments */
-@media print {
-  .print-cv .container, .print-cv .profile, .print-cv .contact-section, .print-cv .professional-section {
-    background-color: #082145 !important; /* Dark Blue for print */
-    color: #f0f4f8 !important; /* Light text color */
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 10px !important;
-  }
-
-  /* Profile section in print */
-  .print-cv .profile-image {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-  }
-
-  /* Layout adjustments */
-  .print-cv .resume-container {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 5px !important;
-  }
-
-  .print-cv .contact-section, .print-cv .professional-section {
-    width: 48% !important;
-    margin: 5px 0 !important;
-  }
-
-  /* Remove buttons in print mode */
-  .button-container, .btn {
-    display: none !important;
-  }
-
-  /* Skill bar colors */
-  .print-cv .skill-bar {
-    background-color: #e0e0e0 !important;
-  }
-
-  .print-cv .skill-fill {
-    background-color: #003366 !important; /* Ensure dark blue for print */
-  }
-}

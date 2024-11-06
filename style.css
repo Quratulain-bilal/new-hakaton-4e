@@ -393,8 +393,8 @@ h2 {
 
   .contact-section,
   .professional-section {
-    width: 100% !important;  /* Full width for mobile */
-    margin-bottom: 20px !important;
+    width: 40% !important;  /* Full width for mobile */
+    margin-bottom: 3px !important;
   }
 
   /* Prevent content from breaking */
@@ -436,6 +436,7 @@ h2 {
 @media (max-width: 576px) {
   .profile h2 {
     font-size: large;
+    color:white;
   }
   .profile-image {
     width: 120px;

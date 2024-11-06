@@ -349,62 +349,78 @@ h2 {
 .btn:hover {
   opacity: 0.8;
 }
-/* Print adjustments */
+
+
+/* Print-specific styles */
 @media print {
-  /* Ensuring layout and colors for print */
-  body, .container {
-    background-color: #ffffff !important;
-    color: #000 !important;
+  /* Ensure that all colors are applied during print */
+  body {
+    color: #000; /* Default text color */
+    background-color: #fff; /* Ensure background is white for printing */
   }
 
-  .profile, .contact-section {
-    background-color: #082145 !important;
-    color: #f0f4f8 !important;
-    page-break-inside: avoid;
-    margin: 5px 0;
-    border: none;
-    box-shadow: none;
-    width:97;
-  }
-
-  .profile-image {
-    width: 100px;
-    height: 100px;
-    margin-right: 15px;
-  }
-
-  .resume-container {
+  /* Profile section for print */
+  .profile {
     flex-direction: row;
-    gap: 20px;
+    background-color: #082145; /* Ensure profile background is applied */
+    color: white; /* Ensure text color is white */
+    padding: 10px;
+    width: 96%;
+    box-shadow: none; /* Remove box-shadow for print */
   }
 
-  /* Hide interactive buttons and elements on print */
-  .button-container, .btn {
-    display: none !important;
-  }
-
-  /* Font and color adjustments for readability */
-  h2 {
-    color: #f0f4f8 !important;
-  }
-
-  .skill-bar, .skill-fill {
-    background-color: #082145 !important;
-    color: #f0f4f8 !important;
-  }
-}
-
-/* Small screen adjustments */
-@media (max-width: 576px) {
   .profile h2 {
-    font-size: large;
+    color: #e6e6fa; /* Ensure heading color remains */
   }
+
   .profile-image {
-    width: 120px;
-    height: 120px;
+    object-fit: contain; /* Change to contain */
   }
-  .btn {
+
+  /* Contact section */
+  .contact-section {
+    background-color: #082145; /* Ensure background is dark blue */
+    color: whitesmoke; /* Ensure text is white */
+  }
+
+  /* Ensure all other sections maintain the correct background and text colors */
+  .professional-section {
+    background-color: #ffffff; /* Ensure the background remains white */
+    color: #000; /* Set text color to black for better visibility on print */
+    border: 1px solid #ddd;
+  }
+
+  /* Ensure no padding or margins interfere with print */
+  .resume-container {
+    display: block;
     width: 100%;
-    margin-top: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn {
+    display: none; /* Hide buttons when printing */
+  }
+
+  .button-container {
+    display: none; /* Hide button container */
+  }
+
+  /* Remove excess margins and padding for print */
+  .info-box {
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: #f4f4f4; /* Change to f4f4f4 */
+    color: #000; /* Ensure text is black */
+  }
+
+  /* Skill bars for print */
+  .skill-bar {
+    background-color: #e0e0e0;
+  }
+
+  .skill-fill {
+    background-color: #082145; /* Change to 082145 */
   }
 }
+

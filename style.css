@@ -199,8 +199,7 @@ label {
 
 /*cssssssssssssssssss*/
 /* Container styling */
-
- .container {
+.container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -294,6 +293,7 @@ label {
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
+  padding: 15;
 }
 
 /* Contact & Professional Sections */
@@ -329,7 +329,9 @@ h2 {
   margin-bottom: 20px;
   font-size: 1.5rem;
 }
-
+.dddd{
+  width: 30%;
+}
 
 /* Print Styling for All Screens */
 @media print {
@@ -340,36 +342,33 @@ h2 {
     -webkit-print-color-adjust: exact; /* Ensures colors print accurately */
   }
 
-  /* Profile Section Print */
-  .profile .profile {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
-    width: 70%;
-  }
-  
-  .profile-image {
-    margin: 0 auto 10px;
-    width: 120px;
-    height: 120px;
-    
+  /* Hide Buttons during Print */
+  .btn {
+    display: none; /* Hide buttons during print */
   }
 
-  .profile h2 {
-    font-size: 1.6rem;
-    margin: 10px 0;
+  /* Profile Section Print */
+  .profile {
+    display: flex;
+    flex-direction: column; /* Stack profile elements vertically on small screens */
+    align-items: center; /* Center content on small screens */
+    text-align: center; /* Ensure text is centered on small screens */
+    padding: 15px;
+    width: 70%; /* Control profile section width */
+    margin: 0 auto; /* Center profile */
   }
+
   .profile h2 {
     color: #ffebc2;
-    font-size: 1.5rem;
-    margin-left: 10px;
+    font-size: 1.6rem;
+    margin-top: 10px;
   }
 
   .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    
+    margin-bottom: 10px; /* Space between image and name */
   }
 
   /* Resume Container for Print */
@@ -384,7 +383,7 @@ h2 {
 
   /* Contact Section Print */
   .contact-section {
-    background-color: #2d3e50;
+    background-color: #082145;
     color: #f0f4f8;
     width: 58%;
     margin: 0 5px;
@@ -408,12 +407,55 @@ h2 {
     border-radius: 5px;
   }
 
-  /* Print Layout Adjustments */
+  /* Print Layout Adjustments for Small Screens (Mobile) */
   @media (max-width: 768px) {
     .profile, .contact-section, .professional-section {
-      width: 100%;
+      width: 97%; /* Ensure all sections take full width on small screens */
       margin: 0 0 10px 0;
       padding: 10px;
     }
+
+    .profile h2 {
+      font-size: 1.3rem; /* Adjust font size for smaller screens */
+    }
+
+    .profile-image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .contact-section, .professional-section {
+      padding: 8px; /* Adjust padding for small screens */
+    }
+  }
+
+  /* Large Screens Adjustments (Above 768px) */
+  @media (min-width: 769px) {
+    .profile {
+      flex-direction: row; /* Arrange profile content in a row on large screens */
+      align-items: center; /* Vertically center the items */
+      text-align: left; /* Align text to the left */
+      width: 97%; /* Adjust width for larger screens */
+      margin-bottom: 7px;
+    }
+
+    .profile h2 {
+      font-size: 2rem;
+      margin-left: 20px; /* Space between name and profile image */
+    }
+
+    .profile-image {
+      margin-right: 20px; /* Space between image and name */
+      width: 140px;
+      height: 140px;
+    }
   }
 }
+@media print {
+  /* Hide buttons during print */
+  .btn, button {
+    display: none !important; /* Ensure buttons are hidden */
+  }
+}
+
+ 

@@ -350,3 +350,72 @@ h2 {
   opacity: 0.8;
 }
 
+/* Print-specific styles */
+@media print {
+  /* Ensure that all colors are applied during print */
+  body {
+    color: #000; /* Default text color */
+    background-color: #fff; /* Ensure background is white for printing */
+  }
+
+  /* Profile section for print */
+  .profile {
+    flex-direction: row;
+    background-color: #082145; /* Ensure profile background is applied */
+    color: white; /* Ensure text color is white */
+    padding: 10px;
+    width: 96%;
+    box-shadow: none; /* Remove box-shadow for print */
+  }
+
+  .profile h2 {
+    color: #e6e6fa; /* Ensure heading color remains */
+  }
+
+  /* Contact section */
+  .contact-section {
+    background-color: #082145; /* Ensure background is dark blue */
+    color: whitesmoke; /* Ensure text is white */
+  }
+
+  /* Ensure all other sections maintain the correct background and text colors */
+  .professional-section
+   {
+    background-color: #ffffff; /* Ensure the background remains white */
+    color: #000; /* Set text color to black for better visibility on print */
+    border: 1px solid #ddd;
+  }
+
+  /* Ensure no padding or margins interfere with print */
+  .resume-container {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn {
+    display: none; /* Hide buttons when printing */
+  }
+
+  .button-container {
+    display: none; /* Hide button container */
+  }
+
+  /* Remove excess margins and padding for print */
+  .info-box {
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: #fff; /* Ensure info box background is white */
+    color: #000; /* Ensure text is black */
+  }
+
+  /* Skill bars for print */
+  .skill-bar {
+    background-color: #e0e0e0;
+  }
+
+  .skill-fill {
+    background-color: #003366; /* Set fill color to dark blue */
+  }
+}

@@ -112,59 +112,82 @@
       
     </div>
   </div>
+<!-- Generated resume container -->
 
-  <!-- Generated resume container -->
-  
-  
-  <div class="container" id="generatedResume" style="display: none;">
-    <div class="profile">
-      <img id="resumeImage" src="" class="profile-image" alt="Profile Picture" />
-      <div class="profile-info">
-        <h2 id="resumeName" class="heading heading-light"></h2>
-        <p id="resumeObjective" class="profile-text obt"></p>
-      </div>
-    </div>
-
-    <div class="resume-container">
-      <div class="contact-section">
-        <h2>Contact Information</h2>
-        <div class="info-box">
-          <p class="icon"><i class="fas fa-phone"></i> <span id="resumeContact"></span></p>
-          <p class="icon"><i class="fas fa-envelope"></i> <span id="resumeEmail"></span></p>
-          <p class="icon"><i class="fas fa-map-marker-alt"></i> <span id="resumeAddress"></span></p>
-          <p class="icon"><i class="fas fa-birthday-cake"></i> <span id="resumeBirth"></span></p>
+    <div class="container" id="generatedResume" style="display: none">
+      <div class="profile">
+        <img
+          id="resumeImage"
+          src=""
+          class="profile-image"
+          alt="Profile Picture"
+        />
+        <div class="profile-info">
+          <h2 id="resumeName" class="heading heading-light"></h2>
+          <p id="resumeObjective" class="profile-text obt"></p>
         </div>
+      </div>
 
-        <div class="languages-section">
-          <div class="language-container">
-            <h2>Languages</h2>
-            <p id="resumeLanguages" class="info-box"></p>
+      <div class="resume-container">
+        <div class="contact-section">
+          <h2><i class="fas fa-phone-alt"></i> Contact Information</h2>
+
+          <div class="info-box">
+            <p class="icon">
+              <i class="fas fa-phone"></i> <span id="resumeContact"></span>
+            </p>
+            <p class="icon">
+              <i class="fas fa-envelope"></i> <span id="resumeEmail"></span>
+            </p>
+            <p class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+              <span id="resumeAddress"></span>
+            </p>
+            <p class="icon">
+              <i class="fas fa-birthday-cake"></i>
+              <span id="resumeBirth"></span>
+            </p>
+          </div>
+
+          <div class="languages-section">
+            <div class="language-container">
+              <h2>Languages <i class="fas fa-language"></i></h2>
+
+              <p id="resumeLanguages" class="info-box"></p>
+            </div>
           </div>
         </div>
+
+        <div class="professional-section">
+          <h2><i class="fas fa-user"></i> Personal Information</h2>
+
+          <h2><i class="fas fa-briefcase"></i> Experience</h2>
+          <div id="resumeExperience" class="info-box">
+            <h2>Experience <i class="fas fa-briefcase"></i></h2>
+          </div>
+
+          <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+
+          <div id="resumeEducation" class="info-box"></div>
+          <h2><i class="fas fa-cogs"></i> Skills</h2>
+          <p id="resumeSkills" class="info-box"></p>
+        </div>
       </div>
 
-      <div class="professional-section">
-        <h2>Professional Information</h2>
-        <h2>Experience</h2>
-        <div id="resumeExperience" class="info-box"></div>
-        <h2>Education</h2>
-        <div id="resumeEducation" class="info-box"></div>
-        <h2>Skills</h2>
-        <p id="resumeSkills" class="info-box"></p>
+      <div class="button-container">
+        <!-- Buttons for printing and editing CV -->
+        <button onclick="printCV()" id="printButton" class="dddd">
+          Print CV
+        </button>
+        <button onclick="editCV()" class="dddd">Edit CV</button>
       </div>
     </div>
 
-    <div class="button-container">
-      <!-- Buttons for printing and editing CV -->
-      <button onclick="printCV()" id="printButton" class="dddd">Print CV</button>
-      <button onclick="editCV()" class="dddd">Edit CV</button>
-    </div>
-  </div>
-     
-
-  <!-- Scripts for functionality -->
-  <script src="script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
-</body>
+    <!-- Scripts for functionality -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+  </body>
 </html>
+
+ 

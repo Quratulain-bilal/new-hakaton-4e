@@ -1,4 +1,4 @@
-// Event Listeners
+
 document
   .getElementById("addExperience")
   ?.addEventListener("click", addExperience);
